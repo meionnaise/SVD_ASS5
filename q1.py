@@ -3,15 +3,15 @@ import numpy as np
 #solve part a)
 def a(Pin, eta, A, d):
 
-    #calculate solar flux
+    #calculate solar flux (0.1.1)
     J_s = solar_flux(Pin, d)
 
-    #equation (a).3
+    #equation(0.1.3)
     Psa = J_s * eta * A
 
     return Psa
 
-#equation (a).1
+#equation 0.1.1
 def solar_flux(P, d):
     J = P / (4 * np.pi * (d ** 2))
     print(f"Solar flux: {J} W/m^2")

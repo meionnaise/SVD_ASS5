@@ -4,10 +4,10 @@ import numpy as np
 #to calculate weight and mass bc q unclear
 def weight(DOD, se):
 
-    #mass
+    #mass (0.2.11)
     m = (P * duration) / (DOD * se)
 
-    #weight
+    #weight (0.2.12)
     W = m * g
 
     return m, W
@@ -23,33 +23,32 @@ global P
 P = 6 * (10 ** (3)) # W
 VDC = 32 # VDC
 
-#calc number of cells
+
+#calc number of cells (0.2.1)
 n_cells = math.floor(VDC / v_cell_avg)
 print(f"number of cells: {n_cells}")
 
-#total voltage
+#total voltage (0.2.3)
 v = n_cells * v_cell_avg
 print(f"total voltage: {v}")
 
-#orbital period
+#orbital period (0.2.6)
 period = 2 * np.pi * np.sqrt( ((R_sc ** 3) / mu) ) #s
 period /= (60 * 60) #hrs
 print(f"orbital period: {period} hrs")
 
-#duration
+#duration (0.2.5)
 global duration
 duration = period / 2
 print(f"duration: {duration} hours")
 
-#acceleration due to gravity @ given alt
+#acceleration due to gravity @ given alt (0.2.8)
 global g
 g = mu / (R_sc ** 2)
 print(f"g: {g} ms^-2")
 
 #list to store my answers : D
 data = []
-
-
 
 #a) Ni-Cd battery with 60 % DOD
 name = "a)"
