@@ -1,9 +1,21 @@
 import numpy as np
 
-#eq (a).1
-def a(Pin, eta, theta):
-    Pout = Pin * eta * np.cos(theta)
-    return Pout
+#solve part a)
+def a(Pin, eta, A, d):
+
+    #calculate solar flux
+    J_s = solar_flux(Pin, d)
+
+    #equation FIX
+    Psa = J_s * eta * A
+
+    return Psa
+
+#equation FIX
+def solar_flux(P, d):
+    J = P / (4 * np.pi * (d ** 2))
+    print(f"Solar flux: {J} W/m^2")
+    return J
 
 #list to store my answers : D
 data = []
@@ -28,7 +40,7 @@ B = 1 * (10 ** (3)) #Hz
 #################################################
 name = "Power output"
 units = "W"
-answer = a(P_s, sol_arr_eff, 0)
+answer = a(P_s, sol_arr_eff, A_eff, d_S)
 ans_a = answer
 thing = name, answer, units
 data.append(thing)
