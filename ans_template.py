@@ -1,4 +1,3 @@
-#list to store my answers : D
 data = []
 
 
@@ -11,8 +10,6 @@ data = []
 #thing = name, answer, units
 #data.append(thing)
 
-
-#print answers
 i = 0
 message = ""
 while i < len(data):
