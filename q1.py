@@ -17,6 +17,10 @@ def solar_flux(P, d):
     print(f"Solar flux: {J} W/m^2")
     return J
 
+def b(Pt, Gt, bandwidth, wavelength, R, Gr, T):
+    SNR = ( (Pt * Gt) / (k * B) ) * ( ( (wavelength) / (4 * np.pi * R) ) ** 2 ) * ( (Gr) / (T) )
+    return SNR
+
 #list to store my answers : D
 data = []
 
@@ -51,7 +55,7 @@ data.append(thing)
 #######################################################################################################
 name = "SNR"
 units = ""
-answer = 0
+answer = b(ans_a, G_t, B, wl, d_E, G_r, T_r)
 ans_b = answer
 thing = name, answer, units
 data.append(thing)
