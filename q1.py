@@ -11,7 +11,7 @@ def a(Pin, eta, A, d):
 
     return Psa
 
-#equation 0.1.1
+#equation (0.1.1)
 def solar_flux(P, d):
     J = P / (4 * np.pi * (d ** 2))
     print(f"Solar flux: {J} W/m^2")
@@ -19,7 +19,7 @@ def solar_flux(P, d):
 
 #solve part b)
 def b(Pt, Gt, bandwidth, wavelength, R, Gr, T):
-    #equation (b).1
+    #equation (0.1.5)
     SNR = ( (Pt * Gt) / (k * B) ) * ( ( (wavelength) / (4 * np.pi * R) ) ** 2 ) * ( (Gr) / (T) )
     return SNR
 
