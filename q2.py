@@ -12,11 +12,11 @@ P = 6 * (10 ** (3)) # W
 VDC = 32 # VDC
 
 #calc number of cells
-n_cells = math.floor(P / VDC)
+n_cells = math.floor(VDC / v_cell_avg)
 print(f"number of cells: {n_cells}")
 
 #total voltage
-v = n_cells * P
+v = n_cells * v_cell_avg
 print(f"total voltage: {v}")
 
 #orbital period
