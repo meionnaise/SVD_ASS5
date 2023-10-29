@@ -3,7 +3,7 @@ import numpy as np
 #eq (a).1
 def a(Pin, eta, theta):
     Pout = Pin * eta * np.cos(theta)
-    return test
+    return Pout
 
 #list to store my answers : D
 data = []
@@ -39,7 +39,7 @@ data.append(thing)
 #######################################################################################################
 name = "SNR"
 units = ""
-answer = 
+answer = 0
 ans_b = answer
 thing = name, answer, units
 data.append(thing)
