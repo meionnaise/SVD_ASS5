@@ -1,7 +1,8 @@
 import numpy as np
 
-def a(x):
-    test = "placeholder""
+#eq (a).1
+def a(Pin, eta, theta):
+    Pout = Pin * eta * np.cos(theta)
     return test
 
 #list to store my answers : D
@@ -27,7 +28,7 @@ B = 1 * (10 ** (3)) #Hz
 #################################################
 name = "Power output"
 units = "W"
-answer = 
+answer = a(P_s, sol_arr_eff, 0)
 ans_a = answer
 thing = name, answer, units
 data.append(thing)
