@@ -1,5 +1,3 @@
-
-
 def dataperimg(res, bpp):
     hehe = res * bpp
     return hehe
